@@ -1,0 +1,98 @@
+/* --- Global Resets & Typography --- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', sans-serif; line-height: 1.6; color: #333; background: #fff; }
+h1, h2, h3 { font-family: 'Poppins', sans-serif; font-weight: 700; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+/* --- Navigation --- */
+header { padding: 20px 0; background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
+nav { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 24px; font-weight: 800; color: #1e2d45; text-decoration: none; }
+.nav-links { display: flex; list-style: none; align-items: center; }
+.nav-links li { margin-left: 30px; }
+.nav-links a { text-decoration: none; color: #333; font-weight: 500; transition: 0.3s; }
+.nav-links a:hover { color: #3182ce; }
+
+/* --- Buttons --- */
+.btn-primary { background: #1e2d45; color: #fff !important; padding: 12px 25px; border-radius: 6px; text-decoration: none; font-weight: 600; border: none; cursor: pointer; display: inline-block; }
+.btn-secondary { background: #3182ce; color: #fff !important; padding: 12px 25px; border-radius: 6px; text-decoration: none; font-weight: 600; }
+.btn-outline { border: 2px solid #fff; color: #fff !important; padding: 10px 25px; border-radius: 6px; text-decoration: none; font-weight: 600; }
+
+/* --- Hero Sections --- */
+.hero { position: relative; height: 75vh; display: flex; align-items: center; color: #fff; background-size: cover; background-position: center; }
+.hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.4); z-index: 1; }
+.hero-content { position: relative; z-index: 2; }
+.hero h1 { font-size: 4rem; line-height: 1.1; margin-bottom: 10px; text-transform: uppercase; }
+.hero p { font-size: 1.2rem; color: #8bb9fe; margin-bottom: 30px; }
+.hero-btns a { margin-right: 15px; }
+
+/* --- Dark Service/Feature Cards --- */
+.section-title { font-size: 2.5rem; color: #1e2d45; margin: 60px 0 40px; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; margin-bottom: 80px; }
+.dark-card { background: #1e2d45; color: #fff; padding: 50px 30px; border-radius: 25px; text-align: center; transition: 0.3s; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+.dark-card:hover { transform: translateY(-10px); background: #253856; }
+.dark-card i { font-size: 50px; margin-bottom: 20px; display: block; }
+.dark-card h3 { margin-bottom: 15px; }
+.dark-card p { font-size: 0.9rem; color: #cbd5e0; }
+
+/* --- About Page Specifics --- */
+.about-overview { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: -60px; position: relative; z-index: 10; }
+.light-box { background: #f8f9fa; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+.mission-box { background: #1e2d45; color: white; padding: 40px; border-radius: 20px; }
+
+/* --- Contact Page Specifics --- */
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; background: #fff; border-radius: 20px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.1); }
+.form-side { background: #f1f3f5; padding: 60px; }
+.info-side { background: #1e2d45; color: #fff; padding: 60px; }
+.contact-input { width: 100%; padding: 15px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 8px; }
+.map-placeholder { width: 100%; height: 250px; background: #2a3b55; border-radius: 15px; margin-top: 20px; }
+
+/* --- Responsive --- */
+@media (max-width: 992px) {
+    .grid-3, .about-overview, .contact-grid { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 2.5rem; }
+}
+/* Ensure the grid splits properly */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.info-side {
+    background: #1e2d45; /* Dark navy color to match your theme */
+    color: #fff;
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.info-side h3 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.contact-details p {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact-details i {
+    color: #3182ce; /* Light blue icon color */
+}
+
+.map-container {
+    margin-top: 25px;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden; /* Ensures the iframe radius works */
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
